@@ -98,14 +98,14 @@ workflows:
         requires:
           - bundle_dependencies
       - deploy_stage:
-          requires:
-            - unit_test
-          filters:
-            branches:
-              only: master
+        requires:
+          - unit_test
+        filters:
+          branches:
+            only: master
       - deploy_dev:
-          requires:
-            - unit_test
-          filters:
-            branches:
-              only: develop
+        requires:
+          - unit_test
+        filters:
+          branches:
+            only: develop
